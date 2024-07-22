@@ -1,0 +1,1046 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Thai", sans-serif;
+}
+
+body {
+    background-color: #2D2928;
+}
+
+.header {
+    margin-left: 105px;
+    margin-right: auto;
+    margin-top: 11px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    background-color: #D5AA7F;
+    width: 100%;
+}
+
+.navcon {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+.logo {
+    margin-left: 100px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    margin: 0 30px; /* ตั้งค่า margin ให้แต่ละรายการ */
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.btn-login button {
+    background-color: #D5AA7F;
+    color: #1E1E1E;
+    border: 1px solid #000;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;    /*Button login*/
+}   
+
+.btn-register button {  
+    background-color: #1E1E1E;
+    color: #D5AA7F;
+    border: 1px solid #000;
+    
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;    /*Button register*/
+}
+
+.btn-login {
+    padding-left: 193px; /* เพิ่มระยะห่างระหว่างปุ่มกับรายการเมนู  */
+    padding-right: 20px;
+}
+
+/* option */
+
+/* เปลี่ยนสีปุ่มเมื่อชี้เมาส์ */
+.btn-login button:hover {
+    background-color: #1E1E1E;
+    color: #D5AA7F;
+    transition: color 0.3s, background-color 0.3s, border 0.3s, padding 0.3s;
+}
+
+.btn-register button:hover {
+    background-color: #D5AA7F;
+    color: #000;
+    transition: color 0.3s, background-color 0.3s, border 0.3s, padding 0.3s;
+}
+
+.menu li a:hover {
+    color: #fff; 
+    background-color: #4B2804; 
+    padding: 4px 8px;
+    border: 1px solid #4B2804;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s, border 0.3s, padding 0.3s; 
+}
+
+/* search bar */
+
+.container-dropdown {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 2px 15px #000;
+    
+    display:flex;
+    align-items: center;
+}
+
+.dropdown-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    width: 400px;
+    height: 40px;
+    margin-left: 104px;
+    padding-left: 12px;
+    padding-top: 9px;
+    padding-bottom: 11px;
+    padding-right: 12px;
+    background: #2D2928;
+    border: 1px solid #D5AA7F;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.dropdown-link img {
+    vertical-align: middle; /* จัดการจัดการตำแหน่งรูปภาพให้ตรงกลางกับข้อความ */
+    margin-right: 5px; /* กำหนดระยะห่างทางด้านขวาของรูปภาพ */
+}
+
+.dropdown-menu {    /*menu*/
+    display: none; /* ซ่อนเมนูเริ่มต้น */
+    background: #fff;
+    width: 400px;
+    margin-left: 104px;
+    margin-top: 8px;
+    border-radius: 8px;
+}
+
+.dropdown-menu.show {
+    display: block; /* แสดงเมนูเมื่อคลาส show ถูกเพิ่ม */
+    position: fixed; /* ล็อค position */
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #D9D9D9;
+    justify-content: space-between; /* จัดปุ่มไปทางขวา */
+}
+
+.dropdown-menu li:first-child { /*Popular Description*/
+    border-bottom: none;
+    border-top-left-radius : 8px;
+    border-top-right-radius: 8px;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom-left-radius : 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.dropdown-menu li:first-child a {
+    padding-top: 10px;
+    font-weight: normal;
+}
+
+.dropdown-menu li .Chonburi,
+.dropdown-menu li .Thailand {
+    color: #757575;
+    font-weight: lighter;
+}
+
+.btn, .btn-2 {
+    border: 1px solid #4B2804;
+    color: #4B2804;
+    font-size: 12px;
+    margin-left: 130px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btn-2 {
+    margin-left: 202px;
+}
+
+.btn:hover, .btn-2:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Check-in*/
+
+.dropdown {
+    position: relative;
+    display: flex;
+}
+
+.dropdown button {
+    display: flex;
+    align-items: center;
+    background-color: #2D2928;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    padding-left: 12px;
+    margin-left: 30px;
+    border: 1px solid #D5AA7F;
+    cursor: pointer;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative; /* ต้องมีตำแหน่งเพื่อให้ปฏิทินแสดงถูกต้อง */
+}
+
+.calendar-container,
+.calendar-container2 {
+    display: none; /* ซ่อนปฏิทินเริ่มต้น */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 8px;
+    width: 200px; /* ให้ปฏิทินมีความกว้างเท่ากับปุ่ม */
+    top: 100%; /* วางปฏิทินลงมาจากปุ่ม */
+    left: 0;
+    margin-top: 10px; /* เว้นระยะห่างระหว่างปุ่มและปฏิทิน */
+}
+
+.calendar-container.show,
+.calendar-container2.show {
+    display: block; /* แสดงปฏิทินเมื่อมีคลาส show */
+}
+
+button.btn-out {
+    display: flex;
+    align-items: center;
+    background-color: #2D2928;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    padding-left: 12px;
+    border: 1px solid #D5AA7F;
+    cursor: pointer;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative; /* ต้องมีตำแหน่งเพื่อให้ปฏิทินแสดงถูกต้อง */
+    margin-left: 0;
+}
+
+
+/*Room*/
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.dropdown-room {
+    display: flex;
+    margin-left: 30px;
+    width: 200px;
+    height: 40px;
+    align-items: center;
+    font-size: 14px;
+    justify-items: space-between;
+    position: relative;
+}
+
+.room-link {
+    display: inline-block;
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #D5AA7F;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #2D2928; /* เพิ่มสีพื้นหลังเพื่อความชัดเจน */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.room {
+    font-size: 12px;
+    align-items: center;
+    margin-left: 41px;
+}
+
+img {
+    margin-left: 12px;
+    margin-right: 4px;
+}
+
+.img-down {
+    width: 20px;
+    height: 20px;
+    margin-right: 21px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 300px; /* กำหนดความกว้างเท่ากับลิงก์ห้อง */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 50px; /* เพิ่ม top เพื่อขยับ dropdown ลงมา */
+    border-radius: 8px; /* ให้เข้ากับมุมโค้งของปุ่ม */
+    overflow: hidden; /* จัดการกับมุมโค้งของ dropdown */
+    padding: 0; /* ลบการจัดตำแหน่งพื้นฐาน */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex; /* ใช้ Flexbox เพื่อจัดตำแหน่ง */
+    align-items: center; /* จัดตำแหน่งภาพและข้อความให้อยู่กลางแนวตั้ง */
+    box-sizing: border-box; /* รวม padding ในความกว้าง */
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dropdown-content .title1 {
+    font-weight: lighter;
+    color: #757575;
+    display: contents;/*จัดให้อยู่กับ Content*/
+}
+
+.dropdown-content img {
+    width: 20px; /* กำหนดขนาดภาพคงที่ */
+    height: 20px; /* กำหนดขนาดภาพคงที่ */
+    margin-right: 12px; /* เว้นระยะระหว่างภาพและข้อความ */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Search */
+
+button.search {
+    min-width: 150px;
+    min-height: 40px;
+    background-color: #D5AA7F;
+    font-size: 16px;
+    margin-left: 26px;
+    border:1px solid #000;
+    border-radius: 8px;
+}
+
+button.search:hover {
+    background-color: #1E1E1E;
+    color: #D5AA7F;
+    transition: color 0.4s, background-color 0.4s
+}
+
+/* Address */
+
+.address {
+    margin-left: 100px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.address h3 {
+    font-size: 12px;
+    font-weight: normal;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.next {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Content */
+
+.header-content {
+    margin-left: 100px;
+    margin-top: 18px;
+}
+
+.header-content h2 {
+    color: #D5AA7F;
+    font-size: 32px;
+}
+
+.address-header {
+    margin-left: 80px;
+    margin-top: 12px;
+    
+}
+
+.address-header h3 {
+    font-weight: normal;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* picture */
+
+
+.content {
+    padding: 20px;
+}
+
+/* Grid container styling */
+.grid-card {
+    display: grid;
+    /* grid-template-columns: 715px auto auto; */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Box styling */
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: #000;
+    border: none;
+    border-radius: 12px;
+}
+
+.bg1 {
+    background-image: url('/img/pic1.png');
+    width: 715px;
+    height: 400px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    position: relative;
+    margin-left: 100px;
+    z-index: -1;
+}
+
+.bg2, .bg3, .bg4, .bg5 {
+    background-color: #D5AA7F; 
+    width: 250px;
+    height: 194px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border: none;
+}
+
+/* Arrange boxes on the right */
+.bg2 {
+    background-image: url('/img/pic2.png');
+    grid-column: 2 / 3;
+    grid-row: 1;    /*แถว*/
+
+}
+
+.bg3 {
+    background-image: url('/img/pic3.png');
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+.bg4 {
+    background-image: url('/img/pic4.png');
+    grid-column: 3 / 4;
+    grid-row: 1;
+    margin-right: 100px;
+}
+
+.bg5 {
+    background-image: url('/img/pic5.png');
+    grid-column: 3 / 4;
+    grid-row: 2;
+    margin-right: 100px;
+}
+
+.bg5 p {
+    font-size: 20px;
+    background-color: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+.btn-see-all {
+    background-color: #D5AA7F;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-see-all:hover {
+    background-color: #1E1E1E;
+    color: #D5AA7F;
+    transition: color 0.4s, background-color 0.4s
+}
+
+.header-content2 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.3); 
+}
+
+.menu-content2 {
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    padding: 0;
+    margin-left: 100px;
+    font-size: 16px;
+}
+
+.menu-content2 li {
+    margin: 0 15px;
+}
+
+.menu-content2 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.price-and-deal {
+    display: flex;
+    align-items: center;
+}
+
+.price h3{
+    font-size: 32px;
+    display: flex;
+    justify-content: right;
+    font-weight: normal;
+    color: #D5AA7F;
+    margin-right: 30px;
+}
+
+.btn-deal button{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #D5AA7F;
+    border-radius: 100px;
+    padding: 9px 16px;
+    margin-right: 100px;
+}
+
+.btn-deal button:hover {
+    background-color: #1E1E1E;
+    color: #D5AA7F;
+    transition: color 0.4s, background-color 0.4s
+}
+
+/* detail   */
+
+
+.all-detail {       /*ตัวกำหนด layout*/
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+}
+
+.detail-hotel {
+    margin-left: 100px;
+    margin-top: 30px;
+    min-width: 820px;
+    height: 260px;
+    border-bottom: 1px solid #D5AA7F;
+}
+
+.detail-hotel h3 {
+    font-size: 24px;
+    color: #D5AA7F;
+}
+
+.detail-hotel p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.detail-hotel h6 {
+    color: #D5AA7F;
+    font-size: 14px;
+    font-weight: normal;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.detail-hotel h6:hover {
+    font-weight: bold;
+    transition: font-weight 0.4s;
+}
+
+.spec-room {
+    margin-top: 30px;
+    border: 1px solid #D5AA7F;
+    border-radius: 12px;
+    min-width: 400px;
+    min-height: 517px;
+}
+
+.list-detail {
+    margin-top: 47px;
+    margin-left: 24px;
+}
+
+.spec-room h4 {
+    font-size: 20px;
+    color: #D5AA7F;
+    font-weight: normal;
+    margin-top: 18px;
+    margin-left: 24px;
+}
+
+.spec-room p {
+    font-size: 16px;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.wifi {
+    display: flex;
+}
+
+.read-more {
+    padding-top: 114px;
+    padding-left: 24px;
+    align-items: center;
+    display: flex;
+}
+
+.read-more p {
+    color: #D5AA7F;
+    cursor: pointer;
+}
+
+.read-more p:hover {
+    font-weight: bold;
+    transition: font-weight 0.4s;
+}
+
+main {
+    padding-top: 60px; /* Add padding to avoid content being hidden under the fixed header */
+}
+
+.detail-content {
+    background: #2D2928;
+}
+
+.content-overview {
+    margin-left: 150px;
+    margin-top: -300px;
+
+}
+
+.content-overview h3 {
+    color: #D5AA7F;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 28px;
+}
+
+.content-overview table {
+    color: #fff;
+    font-size: 18px;
+    list-style: none;
+    align-items: center;
+}
+
+.table-overview {
+    border-collapse: collapse; /* ทำให้เส้นขอบระหว่างเซลล์หายไป */
+    width: 757px;
+    height: 141px;
+}
+
+table, th, td {
+    border: none; /* ลบเส้นขอบ */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* section Room */
+
+.bg6 {
+    background-image: url('/img/bg6.png');
+    width: 340px;
+    height: 200px;
+}
+
+.content-room {
+    width: 1240px;
+    height: 416px;
+    margin-left: 150px;
+    margin-top: 70px;
+    border-top: 1px solid #D5AA7F;
+}
+
+.content-room h3 {
+    font-size: 24px;
+    color: #D5AA7F;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 32px;
+    padding-bottom: 23px;
+}
+
+.content-room h4 {
+    color: #fff;
+    font-size: 24px;
+    padding-bottom: 26px;
+}
+
+.order-room {
+    display: flex;
+    align-items: center;
+}
+
+.table-room {
+    width: 642px;
+    height: 149px;
+    margin-left: 22px;
+    margin-right: 146px;
+}
+
+.table-room th {
+    color: #fff;
+    font-size: 16px;
+}
+
+.table-room td {
+    color: #fff;
+    font-size: 16px;
+}
+
+.table-room img {
+    margin: 0;
+    padding: 0;
+}
+
+.order-room button {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #D5AA7F;
+    border-radius: 100px;
+    padding: 9px 16px;
+    margin-right: 100px;
+}
+
+.order-room button:hover {
+    background-color: #1E1E1E;
+    color: #D5AA7F;
+    transition: color 0.4s, background-color 0.4s
+}
+
+.bg7 {
+    background-image: url('/img/bg7.png');
+    width: 340px;
+    height: 200px;
+}
+
+.content-room h5 {
+    color: #fff;
+    font-size: 24px;
+    padding-bottom: 26px;
+    margin-top: 24px;
+}
+.see-room {
+    color: #D5AA7F;
+    font-size: 14px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.see-room:hover{
+    font-weight: bold;
+    transition: font-weight 0.4s;
+}
+
+/*Location*/
+
+.section-location {
+    width: 1240px;
+    height: 574px;
+    margin-left: 150px;
+    /* margin-top: 70px; */
+    border-top: 1px solid #D5AA7F;
+}
+
+.header-location h3 {
+    padding-top: 34px;
+    padding-bottom: 33px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #D5AA7F;
+}
+
+.content-location {
+    display: flex;
+}
+
+.map img {
+    width: 890px;
+    height: 500px;
+}
+
+.content-dropdown-location {
+    width: 350px;
+    height: 500px;
+    background-color: #EDEDED;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: -10px 0 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.content-dropdown-location h4 {
+    color: #1E1E1E;
+    font-size: 14px;
+    background-color: #D5AA7F;
+    padding-bottom: 10px;
+    font-weight: bold;
+    width: 350px;
+    height: 50px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    align-items: center;  /* จัดให้อยู่ตรงกลางในแนวตั้ง */
+    justify-content: center;  /* จัดให้อยู่ตรงกลางในแนวนอน */
+    text-align: center;  /* จัดให้อยู่ตรงกลางในแนวนอนสำหรับข้อความหลายบรรทัด */
+}
+
+.selection {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    width: 334px;
+    height: 40px;
+    background-color: #fff;
+    border-bottom:1px solid #D9D9D9;
+}
+
+.selection p {
+    font-size: 14px;
+    color: #1E1E1E;
+}
+
+.selection img {
+    width: 11.67px;
+    height: 16.67px;
+}
+
+.room-pic-star {
+    display: flex;
+    width: 334px;
+    height: 100px;
+    background-color: #fff;
+    padding-top: 10px;
+    border-bottom:1px solid #D9D9D9;
+}
+
+.bg8 {
+    background-image: url('/img/1001.png');
+    width: 100px;
+    height: 80px;
+    margin-left: 13px;
+}
+
+.room-pic-star p {
+    font-size: 14px;
+    color: #000;
+    padding-left: 8px;
+    padding-top: 16px;
+}
+
+.room-pic-star p img {
+    margin: 0;
+    padding: 0;
+}
+
+.layout-explore {
+    display: flex;
+    align-items: center;
+}
+
+.explore {
+    width: 334px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between;
+    border-bottom:1px solid #D9D9D9;
+}
+
+.icon {
+    padding: 10px;
+}
+
+.layout-explore {
+    display: flex;
+    align-items: center;
+}
+
+.play {
+    width: 334px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between;
+    border-bottom:1px solid #D9D9D9;
+}
+
+.icon {
+    padding: 10px;
+}
+
+.layout-play {
+    display: flex;
+    align-items: center;
+}
+
+.shop {
+    width: 334px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+.icon {
+    padding: 10px;
+}
+
+.layout-shop {
+    display: flex;
+    align-items: center;
+}
+
+/*Footer*/
+
+.footer-header {
+    width: auto;
+    height: 340px;
+    background-color: #D5AA7F;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    flex-direction: column;
+}
+
+.logo-footer {
+    margin-bottom: 50px;
+}
+
+.menu-footer ul {
+    list-style: none; /* ลบเครื่องหมายหน้ารายการ */
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงในแนวนอน */
+    padding: 0; /* ลบการเยื้องด้านใน */
+    margin: 0; /* ลบการเยื้องด้านนอก */
+}
+
+.menu-footer li {
+    margin-right: 30px; /* กำหนดช่องว่างระหว่างรายการเมนู */
+}
+
+.menu-footer a {
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    color: #000; /* กำหนดสีข้อความ */
+    font-size: 18px;
+}
+
+.menu-footer li a:hover {
+    color: #fff; 
+    background-color: #4B2804; 
+    padding: 4px 8px;
+    border: 1px solid #4B2804;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s, border 0.3s, padding 0.3s; 
+}
+
+.footer-bottom {
+    background-color: #2D2928;
+    font-size: 14px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}

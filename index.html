@@ -1,0 +1,327 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Test-MelodySkill</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <h2>MELODY SKILL TEST</h2>
+    </div>
+    <nav>
+        <div class="container">
+            <div class="navcon">
+                <div class="logo">
+                    <img src="/img/logo.png" alt="Logo">
+                </div>
+                <ul class="menu">
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Flights</a></li>
+                    <li><a href="#">Airport Transfer</a></li>
+                    <li><a href="#">Car Rental</a></li>
+                    <li><a href="#">Things to Do</a></li>
+                </ul>    
+                    <div class="btn-login"><button>Login</button></div>
+                    <div class="btn-register"><button>Register</button></div>
+            </div>
+        </div>
+        
+            <div class="container-dropdown">
+                <span class="dropdown-section">
+                    <a href="#" class="dropdown-link" id="dropdownLink"><img src="/img/Vector.png">City,Hotel,Place to go </a>
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <ul>
+                            <li><a href="">Poppular Destination</a></li>
+                            <li>
+                                <div class="dropdown-item">
+                                    <a href="">
+                                        Pattaya <br>
+                                        <span class="Chonburi">Chonburi,Thailand</span>
+                                    </a>    
+                                    <button class="btn">District / City</button>
+                                </div>    
+                            </li>
+                        <li>
+                            <div class="dropdown-item">
+                                <a href="">
+                                    Bangkok <br>
+                                    <span class="Thailand">Thailand</span>
+                                </a>
+                                    <button class="btn-2">District / City</button> 
+                            
+                        </li>
+                    </ul>
+                </div>
+            </span>
+
+                <div class="dropdown">
+                    <button onclick="toggleCalendar()"><img src="/img/calendar-check.png" alt="">Check-In</button>
+                    <div class="calendar-container" id="calendarContainer">
+                        <!-- Check-In -->
+                        <form action="date"></form>
+                    </div>
+                    <button class="btn-out" onclick="toggleCalendar2()"><img src="/img/calendar-check.png" alt="">Check-Out</button>
+                    <div class="calendar-container2" id="calendarContainer">
+                        <!-- Check-Out -->
+                        <form action="date"></form>
+                    </div>
+                </div>
+
+                <!-- Room -->
+
+                <div class="dropdown-room">
+                    <a href="#" class="room-link" id="roomLink">
+                        <img src="/img/people.png" alt="People Icon">
+                        1 Adult
+                        <div class="room">
+                            <div class="img-down">
+                                <img src="/img/down.png" alt="Dropdown Icon">
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="#">Room <img src="/img/--.png" alt=""> 1 <img src="/img/+.png" alt=""></a>
+                        <a href="#">Adults<div class="title1"><br>Age 18 or above</div> <img src="/img/--.png" alt=""> 1 <img src="/img/+.png" alt=""></a>
+                        <a href="#">Children<div class="title1"><br>Age 0-17</div>  <img src="/img/--.png" alt=""> 1 <img src="/img/+.png" alt=""></a>
+                    </div>
+                </div>
+
+                <!-- Search -->
+                <div class="button-search">
+                    <button class="search"><img src="/img/search.png" alt="">search</button>
+                </div>
+            </div>
+    </nav>
+
+    <div class="address">
+        <h3>Home <img src="/img/next.png" alt="" class="next">Hotels<img src="/img/next.png" alt="" class="next">THE LUXURY HOTEL</h3>
+    </div>
+
+    <div class="header-content">
+        <h2>THE LUXURY HOTEL</h2>
+    </div>
+
+    <div class="address-header">
+        <h3><img src="/img/mdi_location-favorite.png" alt="">The Luxury Hotel ,Pattaya,Chonburi,Thailand.</h3>
+    </div>
+
+    <!-- Content -->
+
+    <div class="content">
+        <div class="grid-card">
+            <div class="box bg1">
+                <a href="photo_by_hotel.html" class="btn-see-all">
+                    <img src="/img/solar_camera-linear.png" alt="Camera Icon">
+                    See all photos
+                </a>
+            </div>
+            <div class="box bg2"></div>
+            <div class="box bg3"></div>
+            <div class="box bg4"></div>
+            <div class="box bg5">
+                <p>5+</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-content2">
+        <nav>
+            <ul class="menu-content2">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#room">Room</a></li>
+                <li><a href="#location">Location</a></li>
+            </ul>
+            <div class="price-and-deal">
+                <div class="price">
+                    <h3>฿1,358</h3>
+                </div>
+                <div class="btn-deal">
+                    <button>View this deal</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="all-detail">
+        <div class="detail-hotel">
+            <h3>THE LUXURY HOTEL</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br> nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis <br> aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla <br> pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <br> deserunt mollit anim id est laborum.</p>
+            <h6>Read more <img src="/img/mdi_chevron-up.png" alt=""></h6>
+        </div>
+        <div class="spec-room">
+            <h4>Main Facilities</h4>
+            <div class="list-detail">
+                <p><img src="/img/AC.png" alt="">AC</p>
+                <p><img src="/img/res.png" alt="">Restaurant</p>
+                <p><img src="/img/swim.png" alt="">Swimming Pool</p>
+                <p><img src="/img/clock.png" alt="">24-Hour Front Desk</p>
+                <p><img src="/img/iconoir_parking.png" alt="">Parking</p>
+                <p><img src="/img/lif.png" alt="">Elevator</p>
+                <p><img src="/img/logos_wifi.png" alt="">Wifi</p>
+                <div class="read-more">
+                    <p>Read More <img src="/img/right.png" alt=""></p>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+
+        <div class="detail-content">
+            <section id="overview">
+                <div class="content-overview">
+                    <h3>Staycation offers available <br>
+                        Get special benefits for your stay</h3>
+                    <table class="table-overview">
+                        <tr class="list-overview">
+                            <th><img src="/img/Group 44.png" alt="">Food and Drinks</th>
+                            <th><img src="/img/Frame 139.png" alt="">Wellness</th>
+                            <th><img src="/img/Group 45.png" alt="">Activities</th>
+                        </tr>
+                        <tr>
+                            <td><img src="/img/check-sm.png" alt="">Room service [24-hour]</td>
+                            <td><img src="/img/check-sm.png" alt="">Salon </td>
+                            <td><img src="/img/check-sm.png" alt="">Swimming Pool</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/img/check-sm.png" alt="">Coffee shop</td>
+                            <td><img src="/img/check-sm.png" alt="">Fitness center</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/img/check-sm.png" alt="">Room service</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section id="room">
+                <div class="content-room">
+                    <h3>ROOMS</h3>
+                    <h4>Superior Modern</h4>
+                    <div class="order-room">
+                        <div class="box bg6"></div>
+                        <table class="table-room">
+                            <tr>
+                                <th>Room Option(s)</th>
+                                <th>Guest(s)</th>
+                                <th>Price/room/night</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </td>
+                                <td>2 <img src="/img/person-fill.png" alt=""><img src="/img/person-fill.png" alt=""></td>
+                                <td>฿1,358</td>
+                            </tr>
+                        </table>
+                        <button>Choose</button>
+                    </div>
+                    <div class="see-room">
+                        <p>See room details <img src="/img/right.png" alt=""></p>
+                    </div>
+                </div>
+                <div class="content-room">
+                    <h5>Business Suite</h5>
+                    <div class="order-room">
+                        <div class="box bg7"></div>
+                        <table class="table-room">
+                            <tr>
+                                <th>Room Option(s)</th>
+                                <th>Guest(s)</th>
+                                <th>Price/room/night</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </td>
+                                <td>2 <img src="/img/person-fill.png" alt=""><img src="/img/person-fill.png" alt=""></td>
+                                <td>฿2,358</td>
+                            </tr>
+                        </table>
+                        <button>Choose</button>
+                    </div>
+                    <div class="see-room">
+                        <p>See room details <img src="/img/right.png" alt=""></p>
+                    </div>
+                </div>
+            </section>
+            <section id="location">
+                <div class="section-location">
+                    <div class="header-location">
+                        <h3>Where’s the LUXURY Hotel</h3>
+                    </div>
+                    <div class="content-location">
+                        <div class="map">
+                            <img src="/img/map.png" alt="">
+                        </div>
+                        <div class="content-dropdown-location">
+                            <h4>What’s near by</h4>
+                            <div class="selection">
+                                <img src="/img/selection.png" alt=""><p>Current Selection</p>
+                            </div>
+                            <div class="room-pic-star">
+                                <div class="box bg8"></div>
+                                <p>THE LUXURY HOTEL2 <br> <img src="/img/star.png" alt=""><img src="/img/star.png" alt=""><img src="/img/star.png" alt=""><img src="/img/star.png" alt="">
+                                    9.0</p>
+                            </div>
+
+                            <div class="explore">
+                                <div class="layout-explore">
+                                    <img src="/img/explore.png" alt=""><p>Explore</p>
+                                </div>
+                                
+                                <div class="icon">
+                                    <img src="/img/down2.png" alt="">
+                                </div>
+                            </div>
+                            
+                            <div class="play">
+                                <div class="layout-play">
+                                    <img src="/img/play.png" alt=""><p>Play</p>
+                                </div>
+                                
+                                <div class="icon">
+                                    <img src="/img/down2.png" alt="">
+                                </div>
+                            </div>
+                            
+                            <div class="shop">
+                                <div class="layout-shop">
+                                    <img src="/img/shop.png" alt=""><p>Shop</p>
+                                </div>
+                                
+                                <div class="icon">
+                                    <img src="/img/down2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="footer-header">
+                <div class="logo-footer">
+                    <img src="/img/logo.png" alt="">
+                </div>
+                <div class="menu-footer">
+                    <ul>
+                        <li><a href="#">Hotels</a></li>
+                        <li><a href="#">Flights</a></li>
+                        <li><a href="#">Airport Transfer</a></li>
+                        <li><a href="#">Car Rental</a></li>
+                        <li><a href="#">Things to Do</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 Go TRAVEL, Melody Skill
+        </div>
+    
+
+    <script src="/script.js"></script>
+
+</body>
+</html>
